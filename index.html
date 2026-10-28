@@ -46,9 +46,13 @@ header :focus-visible{outline-color:var(--peach)}
 .hero .alt{font-size:16px;color:#e4ebdd}
 .hero p{margin:0 0 26px;font-weight:300;max-width:32em;color:#e4ebdd;font-size:clamp(17px,2.2vw,21px);text-wrap:pretty}
 
-.cgrid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:32px 56px;align-items:center}
+.cgrid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:32px 56px;align-items:stretch}
 .cphoto{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
-@media (max-width:820px){.cgrid{grid-template-columns:minmax(0,1fr)}.cphoto{max-width:340px}}
+.ctext{display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.ctext .kicker{margin:0;line-height:1}.cmid h2{margin:0 0 14px}
+.caddr{display:block;font:300 clamp(22px,3.2vw,34px)/1.2 var(--sans);user-select:all;word-break:break-all}
+.cbot{position:relative}.cbot .mail{margin:0}#copied{position:absolute;top:100%;left:0;margin:10px 0 0;font-size:16px}
+@media (max-width:820px){.cgrid{grid-template-columns:minmax(0,1fr)}.cphoto{max-width:340px}.ctext{justify-content:flex-start}#copied{position:static}}
 .sci{margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
 .hero p.quote{margin:0 0 10px;font-size:clamp(16px,1.9vw,19px);color:#c9d6cc;max-width:36em}
 .hero p.quote em{font-style:italic}
@@ -236,11 +240,12 @@ footer div{max-width:1180px;margin:0 auto;font-size:14px;color:#b9d0c0;display:f
 </section>
 
 <section class="page contact" data-page="contact" id="p-contact">
-  <div class="cgrid"><img class="cphoto" src="img/me_contact.jpg" alt="Théophane Piette en randonnée, casquette et sac à dos" loading="lazy"><div>
-  <p class="kicker">Contact</p>
-  <h2>Écrivez-moi</h2>
-  <div class="mail"><code id="addr">piette.theophane@gmail.com</code><button type="button" class="btn" id="copy">Copier l’adresse</button><a class="btn fill" href="mailto:piette.theophane@gmail.com">Écrire un e-mail</a></div>
-  <p id="copied" class="lead" style="margin:12px 0 0" aria-live="polite"></p>
+  <div class="cgrid"><img class="cphoto" src="img/me_contact.jpg" alt="Théophane Piette en randonnée, casquette et sac à dos" loading="lazy">
+  <div class="ctext">
+    <p class="kicker">Contact</p>
+    <div class="cmid"><h2>Écrivez-moi</h2><code id="addr" class="caddr">piette.theophane@gmail.com</code></div>
+    <div class="cbot"><div class="mail"><button type="button" class="btn" id="copy">Copier l’adresse</button><a class="btn fill" href="mailto:piette.theophane@gmail.com">Écrire un e-mail</a></div>
+    <p id="copied" class="lead" aria-live="polite"></p></div>
   </div></div>
 </section>
 </main>

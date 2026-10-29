@@ -60,13 +60,14 @@ section{padding:64px 0 24px}
 .page[hidden]{display:none}
 .intro{padding-top:72px}
 .enter{padding-bottom:70px}
-.cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.posters{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,300px));gap:28px 32px}.posters img{width:100%;aspect-ratio:436/612;object-fit:cover;display:block;background:var(--surface)}.posters a:hover img{opacity:.92}.posters span{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+.cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
 .cards li{display:flex}
 .cards a{display:block;flex:1;min-width:0;text-decoration:none;background:var(--surface);overflow:hidden}
 .cards img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease}
 .cards a:hover img{transform:scale(1.04)}
 .cards a:hover .ct{color:var(--rust)}
-.cards .ct{display:block;font:400 26px/1.1 var(--display);letter-spacing:.04em;text-transform:uppercase;padding:14px 16px 2px}
+.cards .ct{display:block;font:400 22px/1.1 var(--display);letter-spacing:.04em;text-transform:uppercase;padding:14px 16px 2px}
 .cards .cs{display:block;font-size:14px;color:var(--muted);padding:0 16px 16px}
 h2{font:300 clamp(40px,6vw,68px)/1 var(--display);margin:0 0 14px}
 .kicker{font-family:var(--cond);font-size:14px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--bark);margin:0 0 12px}
@@ -153,7 +154,7 @@ footer div{max-width:1180px;margin:0 auto;font-size:14px;color:#b9d0c0;display:f
 
 <header class="top"><div class="bar">
   <a class="brand" href="#accueil">Théophane Piette</a>
-  <nav aria-label="Sections"><a href="#accueil">Accueil</a><a href="#photos">Mes photos</a><a href="#video">Mes vidéos</a><a href="#medias">Médias</a><a href="#ecrits">Mes écrits</a><a href="#contact">Contact</a></nav>
+  <nav aria-label="Sections"><a href="#accueil">Accueil</a><a href="#photos">Mes photos</a><a href="#video">Mes vidéos</a><a href="#medias">Médias</a><a href="#ecrits">Mes écrits</a><a href="#creation">Créations</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <div class="page" data-page="accueil">
@@ -186,6 +187,7 @@ footer div{max-width:1180px;margin:0 auto;font-size:14px;color:#b9d0c0;display:f
     <li><a href="#video"><img src="img/video_panda.jpg" alt="" loading="lazy"><span class="ct">Mes vidéos</span><span class="cs">Réseaux sociaux et courts-métrages</span></a></li>
     <li><a href="#medias"><img src="img/media_rts.jpg" alt="" loading="lazy"><span class="ct">Médias</span><span class="cs">RTS et podcast</span></a></li>
     <li><a href="#ecrits"><img src="img/vervet.jpg" alt="" loading="lazy"><span class="ct">Mes écrits</span><span class="cs">Récits animaliers et recherche</span></a></li>
+    <li><a href="#creation"><img src="img/affiche_climate_express.jpg" alt="" loading="lazy"><span class="ct">Créations</span><span class="cs">Affiches et campagnes</span></a></li>
   </ul>
 </section>
 </main>
@@ -205,7 +207,7 @@ footer div{max-width:1180px;margin:0 auto;font-size:14px;color:#b9d0c0;display:f
   <div class="cols">
     <div class="group">
       <h3>Climate Express</h3>
-      <p class="note">Une course d’orientation écologique en Suisse romande : des équipes rallient des points de contrôle le plus vite possible, en limitant leur empreinte carbone. Chaque étape met en lumière une action durable près de chez nous, de la mobilité à l’alimentation, de l’agriculture à la biodiversité.</p>
+      <p class="note">Trois jours, une région, dix binômes : une aventure en pleine nature, portée par WWF Youth et Swiss Youth for Climate.</p>
       <ul class="rows"><li><a href="https://www.instagram.com/p/DSApD50kXZX/" target="_blank" rel="noopener"><span class="rt">Climate Express, vidéo 1</span><span class="rs">Instagram</span><span class="ra" aria-hidden="true">↗</span></a></li><li><a href="https://www.instagram.com/p/DTndhCGmMBm/" target="_blank" rel="noopener"><span class="rt">Climate Express, vidéo 2</span><span class="rs">Instagram</span><span class="ra" aria-hidden="true">↗</span></a></li><li><a href="https://www.instagram.com/p/DSF0TV4DUJG/" target="_blank" rel="noopener"><span class="rt">Climate Express, vidéo 3</span><span class="rs">Instagram</span><span class="ra" aria-hidden="true">↗</span></a></li><li><a href="https://www.instagram.com/p/DZSj_57B0w6/" target="_blank" rel="noopener"><span class="rt">Climate Express, vidéo 4</span><span class="rs">Instagram</span><span class="ra" aria-hidden="true">↗</span></a></li></ul>
     </div>
     <div class="group">
@@ -237,6 +239,17 @@ footer div{max-width:1180px;margin:0 auto;font-size:14px;color:#b9d0c0;display:f
     <p class="note">Mes travaux portent sur la communication animale et son analyse par le cerveau.</p>
     <ul class="rows"><li><a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3003798" target="_blank" rel="noopener"><span class="rt">Animal acoustic communication has a conserved optimal rhythm within the neural delta range</span><span class="rs">PLOS Biology, 2026</span><span class="ra" aria-hidden="true">↗</span></a></li><li><a href="https://archive-ouverte.unige.ch/unige:186384" target="_blank" rel="noopener"><span class="rt">Animal brains can follow the beat : the neuro-evolution of rhythmic acoustic processing</span><span class="rs">Thèse de doctorat, UNIGE, 2025</span><span class="ra" aria-hidden="true">↗</span></a></li></ul>
   </div>
+</section>
+
+<section class="page" data-page="creation" id="p-creation">
+  <p class="kicker">Campagnes et visuels</p>
+  <h2>Créations</h2>
+  <ul class="posters">
+    <li><a href="img/affiche_climate_express.jpg" target="_blank" rel="noopener"><img src="img/affiche_climate_express.jpg" alt="Affiche de la Climate Express, 15 au 17 août 2025" loading="lazy"></a><span>Climate Express, 15-17 août 2025</span></li>
+    <li><a href="img/affiche_earth_hour.jpg" target="_blank" rel="noopener"><img src="img/affiche_earth_hour.jpg" alt="Affiche de l’Earth Hour, 28 mars 2026" loading="lazy"></a><span>Earth Hour, 28 mars 2026</span></li>
+    <li><a href="img/jeu_territoire.jpg" target="_blank" rel="noopener"><img src="img/jeu_territoire.jpg" alt="Carte du jeu Territoire en équilibre : le loup gris" loading="lazy"></a><span>Territoire en équilibre, 2026<br>Jeu de sensibilisation aux rôles des grands prédateurs</span></li>
+    <li><a href="img/these_couverture.jpg" target="_blank" rel="noopener"><img src="img/these_couverture.jpg" alt="Couverture de la thèse Animal brains can follow the beat" loading="lazy"></a><span>Couverture de thèse, 2025<br>Animal brains can follow the beat</span></li>
+  </ul>
 </section>
 
 <section class="page contact" data-page="contact" id="p-contact">
